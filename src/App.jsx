@@ -12,11 +12,35 @@ import OnChange from './OnChange'
 import CheckBox from './CheckBox'
 import Radio from './Radio'
 import Map from './Map'
+import Student from './Student'
+import ColorDropDown from './ColorDropDown'
 function App() {
-  let name="ali"
-let age=12
-let email="ssaaadd@gmail.com"
-const [student,setStudent]=useState()
+  const student=[
+        {
+            id:1,
+            RollNo:331,
+            name:"Daniyal",
+            age:20,
+        },
+         {
+            id:2,
+            RollNo:332,
+            name:"ali",
+            age:18,
+        },
+         {
+            id:3,
+            RollNo:333,
+            name:"zubair",
+            age:10,
+        },
+         {
+            id:4,
+            RollNo:335,
+            name:"gulmina",
+            age:18,
+        }
+    ]
   return (
     <>
     {/* <Header/> */}
@@ -33,9 +57,18 @@ const [student,setStudent]=useState()
       <button onClick={()=>setStudent("ALI")}>update</button> */}
       {/* <OnChange/> */}
       {/* <CheckBox/> */}
-       <Map/>
+       {/* <Map/> */}
       {/* <Radio/> */}
-     
+      {/* {
+        student.map((item)=>(
+          <div key={item.id}>
+            <Student data={item}/>
+          </div>
+        ))
+      }
+      */}
+      <h1>clock component</h1>
+      <ColorDropDown/>
 </>
   )
   function Car(){
